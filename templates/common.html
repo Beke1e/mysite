@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Bekele Mulat Enyew{% endblock %}</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="profile-box">
+        <img src="/static/profile.jpg" alt="Profile" />
+        <div>
+          <h1>Bekele Mulat Enyew</h1>
+          <p>Full-Stack Developer | AI & ML Engineer</p>
+        </div>
+      </div>
+      <button id="theme-toggle" class="toggle-button">🔰</button>
+    </header>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+      <a href="/home" class="active"><i class="fas fa-home"></i> Dashboard</a>
+      <a href="/experience"><i class="fas fa-briefcase"></i> Work History</a>
+      <a href="/education"><i class="fas fa-university"></i> Academic Path</a>
+      <a href="/courses"><i class="fas fa-laptop-code"></i> Trainings</a>
+      <a href="/skills"><i class="fas fa-cogs"></i> Capabilities</a>
+      <a href="/projects"><i class="fas fa-lightbulb"></i> My Projects</a>
+      <a href="/research"><i class="fas fa-microscope"></i> Papers</a>
+    </nav>
+
+    <!-- Main Body -->
+    <div class="body">
+      <!-- Left Sidebar -->
+      <aside class="sidebar-left">
+        <h3>Quick Links</h3>
+        <a href="/home" class="active"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="/experience"><i class="fas fa-briefcase"></i> Work History</a>
+        <a href="/education"><i class="fas fa-university"></i> Academic Path</a>
+        <a href="/courses"><i class="fas fa-laptop-code"></i> Trainings</a>
+        <a href="/skills"><i class="fas fa-cogs"></i> Capabilities</a>
+        <a href="/projects"><i class="fas fa-lightbulb"></i> My Projects</a>
+        <a href="/research"><i class="fas fa-microscope"></i> Papers</a>
+        <a href="/contact"><i class="fas fa-address-book"></i> Get in Touch</a>
+        <a href="/social"><i class="fas fa-network-wired"></i> Networks</a>
+      </aside>
+
+      <button id="aside-toggle" class="toggle-button sidebar-toggle" title="Toggle Sidebar">☰</button>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        {% block content %}{% endblock %}
+      </main>
+
+  <!-- Right Sidebar -->
+  <aside class="sidebar-right">
+    <div class="contact-wrapper">
+      <section class="contact-section">
+        <h3>Get in Touch</h3>
+        <p><strong>Location:</strong><br>University of Gondar</p>
+        <p><strong>Phone:</strong><br>+251-936 328 953</p>
+        <p><strong>Email:</strong><br><a href="mailto:bekemuler3@gmail.com">bekemuler3@gmail.com</a></p>
+      </section>
+    </div>
+
+    <div class="networks-wrapper">
+      <section class="networks-section">
+        <h3>Networks</h3>
+        <p><a href="https://www.linkedin.com/in/bekele-enyew-9b44a4108/"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+        <p><a href="https://www.facebook.com/bekele.mulat/"><i class="fab fa-facebook"></i> Facebook</a></p>
+        <p><a href="https://www.instagram.com/bekele_mulat/"><i class="fab fa-instagram"></i> Instagram</a></p>
+      </section>
+    </div>
+  </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 Bekele Mulat Enyew. All rights reserved.</p>
+    </footer>
+  </div>
+  <script src="/static/script.js"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>
